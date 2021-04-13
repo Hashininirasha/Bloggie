@@ -23,7 +23,17 @@
 <?php
         //require function.php file
         require ('function.php');
-
+        if(isset($_POST['register'])){
+            $username=$_POST['username'];
+            $email=$_POST['email'];
+            $password=$_POST['password'];
+            if ($username !='' && $email !='' && $password !=''){
+              echo 'Success';
+            }
+            else{
+              echo 'please fill details';
+            }
+        }
 
         ?>
 </head>
