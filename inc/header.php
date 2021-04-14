@@ -30,7 +30,7 @@
             if ($username !='' && $email !='' && $password !=''){
             
               $pwd_hash = sha1($password);
-              $sql="INSERT INTO user (username, email, password) VALUES('$username', '$email', '$password')";
+              $sql="INSERT INTO user (username, email, password, role) VALUES('$username', '$email', '$pwd_hash', 1)";
               $query = $con->query($sql);
               if($query){
                 header('Location:login.php');
