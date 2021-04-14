@@ -28,7 +28,17 @@
             $email=$_POST['email'];
             $password=$_POST['password'];
             if ($username !='' && $email !='' && $password !=''){
-              echo 'Success';
+              $error= 'Suceefully Registered';
+              $pwd_hash = sha1($password);
+              $sql="INSERT INTO user (username, email, password) VALUES('$username', '$email', '$password')";
+              $query = $conn->query($sql);
+              if($query){
+                header('Location:login.php');
+              }
+              else{
+                $error='Failed to Register user !';
+              }
+              
             }
             else{
               $error= 'please fill details';
