@@ -11,7 +11,7 @@ $con = mysqli_connect($host,$user,$password,$database);
         die("Connection Failed".mysqli_connect_error());
     }
     else{
-        echo "Connection Establised";
+        
     }
     
 ?>
