@@ -22,16 +22,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
 <?php
         //require function.php file
-        require ('function.php');
+        require ('config/db.php');
         if(isset($_POST['register'])){
             $username=$_POST['username'];
             $email=$_POST['email'];
             $password=$_POST['password'];
             if ($username !='' && $email !='' && $password !=''){
-              $error= 'Suceefully Registered';
+            
               $pwd_hash = sha1($password);
               $sql="INSERT INTO user (username, email, password) VALUES('$username', '$email', '$password')";
-              $query = $conn->query($sql);
+              $query = $con->query($sql);
               if($query){
                 header('Location:login.php');
               }
