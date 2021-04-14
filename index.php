@@ -45,6 +45,19 @@ include('inc/header.php');
     </div>
     <br>
     <button type="submit" name="register" class="btn btn-primary">Register</button>
+    <br>
+
+    <div class="row">
+    <div class="form-group">
+    <div class="col-sm-4">
+    <?php if(isset($_POST['register'])):?>
+        <div class="alert alert-dismissible alert-warning">
+        <p><?php echo $error;?></p> 
+        </div>
+      <?php endif;?>
+    </div>
+    </div>
+    </div>
   </fieldset>
 </form>
 </div>

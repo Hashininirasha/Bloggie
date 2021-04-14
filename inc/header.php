@@ -31,7 +31,7 @@
               echo 'Success';
             }
             else{
-              echo 'please fill details';
+              $error= 'please fill details';
             }
         }
 
