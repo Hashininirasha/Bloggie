@@ -14,7 +14,16 @@
                 $password = $row['$password'];
                 $email = $row['email'];
 
+                $data = array(  
 
+                  'id'=>$id,
+                  'username'=>$username,
+                  'email'=>$email,
+                  'password'=>$password
+                );
+                  echo '</pre>';
+                  print_r($data);
+                  echo '</pre>';
               }
 
             }
