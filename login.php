@@ -4,7 +4,24 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         if($email != "" && $password != ""){
-            echo "Validation Passed";
+            $password = sha1($password);
+            $sql = "SELECT * FROM users WHERE email= '$email' AND password='$password' ";
+            $result = mysqli_query($con, $sql) or die ('Error');
+            if(mysqli_num_rows($result) > 0){
+              while($row = mysqli_fetch_assoc($result)){
+                $id = $row['id'];
+                $username = $row['username'];
+                $password = $row['$password'];
+                $email = $row['email'];
+
+
+              }
+
+            }
+            else{
+                  $error="User name or password is Incorrect";
+            }
+
         }
         else{
             $error = "Please fill the details";
@@ -52,13 +69,13 @@ include('inc/header.php');
     </div>
     </div>
     <br>
-    <button type="submit" name="Login" class="btn btn-primary">Login</button>
+    <button type="submit" name="login" class="btn btn-primary">Login</button>
     <br>
 
     <div class="row">
     <div class="form-group">
     <div class="col-sm-4">
-    <?php if(isset($_POST['Login'])):?>
+    <?php if(isset($_POST['login'])):?>
         <div class="alert alert-dismissible alert-warning">
         <p><?php echo $error;?></p> 
         </div>
