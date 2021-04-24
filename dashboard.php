@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,18 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Welcome To Dashboard</h1>
+    <?php
+//include header area
+include('inc/header.php');
+
+?>
+<div class="container">
+<h1>Welcome To <?php echo $_SESSION['username']; ?> </h1>
+</div>
+<?php
+//include footer area
+include('inc/footer.php');
+?>
+
 </body>
 </html>
