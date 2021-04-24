@@ -19,6 +19,7 @@ include('inc/header.php');
 ?>
 <div class="container">
 <h1>Welcome To <?php echo $_SESSION['username']; ?> </h1>
+
 </div>
 <?php
 //include footer area
