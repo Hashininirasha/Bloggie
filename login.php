@@ -5,7 +5,7 @@
         $password = $_POST['password'];
         if($email != "" && $password != ""){
             $password = sha1($password);
-            $sql = "SELECT * FROM users WHERE email= '$email' AND password='$password' ";
+            $sql = "SELECT * FROM user WHERE email= '$email' AND password='$password' ";
             $result = mysqli_query($con, $sql) or die ('Error');
             if(mysqli_num_rows($result) > 0){
               while($row = mysqli_fetch_assoc($result)){
