@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('config/db.php');
     if(isset($_POST['login'])){
         $email = $_POST['email'];
@@ -14,16 +15,12 @@
                 $password = $row['$password'];
                 $email = $row['email'];
 
-                $data = array(  
-
-                  'id'=>$id,
-                  'username'=>$username,
-                  'email'=>$email,
-                  'password'=>$password
-                );
-                  echo '</pre>';
-                  print_r($data);
-                  echo '</pre>';
+                $_SESSION['id'] = $id;
+                $_SESSION['username'] = $username;
+                $_SESSION['password'] = $password;
+                $_SESSION['email'] = $email;
+                header('Location:dashboard.php');
+                
               }
 
             }
