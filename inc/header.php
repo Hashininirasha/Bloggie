@@ -76,7 +76,7 @@
         <div class="dropdown">
   <button class="dropbtn"><i class="fas fa-user"></i></button>
   <div class="dropdown-content">
-    <a href="#">Dashboard</a>
+    <a href="#"><a href="dashboard.php">Dashboard</a>
     <a href="#">Add Profile</a>
     <a href="#">Add Post</a>
     <a href="#">Log Out</a>
