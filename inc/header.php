@@ -76,6 +76,12 @@
         <div class="dropdown">
   <button class="dropbtn"><i class="fas fa-user"></i></button>
   <div class="dropdown-content">
+  <?php echo $login_url = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']; ?>
+  
+  
+
+    
+    <a href="#"><a href="login.php">Login</a>
     <a href="#"><a href="dashboard.php">Dashboard</a>
     <a href="#">Add Profile</a>
     <a href="#">Add Post</a>
