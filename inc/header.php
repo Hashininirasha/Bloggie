@@ -76,7 +76,7 @@
         <div class="dropdown">
   <button class="dropbtn"><i class="fas fa-user"></i></button>
   <div class="dropdown-content">
-  <?php echo $login_url = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']; ?>
+  <?php $login_url = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']; ?>
   <?php if($login_url =='http://localhost/Blog/index.php'): ?>
 
     <a href="#"><a href="login.php">Login</a>
