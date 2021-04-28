@@ -46,6 +46,9 @@ include('inc/header.php');
     <br>
     <button type="submit" name="register" class="btn btn-primary">Register</button>
     <br>
+    <p>
+      Already a Member? <a href="login.php">Sign in </a>
+    </p>
 
     <div class="row">
     <div class="form-group">

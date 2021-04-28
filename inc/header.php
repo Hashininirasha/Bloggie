@@ -70,24 +70,7 @@
 
        
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-        <div class="dropdown">
-  <button class="dropbtn"><i class="fas fa-user"></i></button>
-  <div class="dropdown-content">
-  <?php $login_url = 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF']; ?>
-  <?php if($login_url =='http://localhost/Blog/index.php'): ?>
-
-    <a href="#"><a href="login.php">Login</a>
-  <php elseif($login_url =='http://localhost/Blog/login.php'): ?>
-    <a href="#"><a href="dashboard.php">Register</a>
-  <php endif; ?>
-    <!--<a href="#">Add Profile</a>
-    <a href="#">Add Post</a>
-    <a href="#">Log Out</a>-->
-  </div>
-</div>
+      
       </form>
     </div>
   </div>

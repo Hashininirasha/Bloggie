@@ -77,7 +77,9 @@ include('inc/header.php');
     <br>
     <button type="submit" name="login" class="btn btn-primary">Login</button>
     <br>
-
+    <p>
+      Not yet a Member? <a href="index.php">Sign up </a>
+    </p>
     <div class="row">
     <div class="form-group">
     <div class="col-sm-4">
