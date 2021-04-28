@@ -18,6 +18,11 @@ include('inc/header.php');
 
 ?>
 <div class="container">
+<p>
+<button type="button" class="btn btn-dark" a href="login.php"> <i class="fas fa-user"></i><a href="login.php">|Log out </a></button>
+
+      
+    </p>
 <h1>Welcome To <?php echo $_SESSION['username']; ?> </h1>
 
 </div>
