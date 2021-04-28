@@ -18,13 +18,23 @@ include('inc/header.php');
 
 ?>
 <div class="container">
+<?php
+    $url = $_SERVER['PHP_SELF'];
+    $seg = explode('/',$url);
+    $path = "http://127.0.0.1".$seg[0].'/'.$seg[1];
+    echo $path;
+?>
 <p>
 <button type="button" class="btn btn-dark" a href="login.php"> <i class="fas fa-user"></i><a href="login.php">|Log out </a></button>
 
       
     </p>
-<h1>Welcome To <?php echo $_SESSION['username']; ?> </h1>
-
+<h1 style="text-align: center;"><i class="fas fa-user"></i>| <?php echo $_SESSION['username']; ?> </h1>
+    <div class="row">
+    <div class="col-lg-12">
+        
+    </div>
+    </div>
 </div>
 <?php
 //include footer area
