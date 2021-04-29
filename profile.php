@@ -39,7 +39,7 @@ include('inc/header.php');
     </div>
     </div>
     <br>
-    <button type="submit" name="login" class="btn btn-primary">Submit</button>
+    <button type="submit" name="profile" class="btn btn-primary">Add Profile</button>
     <br>
     
     <div class="row">
