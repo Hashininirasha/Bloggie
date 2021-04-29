@@ -1,6 +1,20 @@
+<?php session_start(); ?>
 
+<?php
+    include("config/db.php");
+    if(isset($_FILES['avatar'])){
 
+        $profession = $_POST['profession'];
+        if($profession !=" "){
+          echo "Validation Passed";
+        }
+        else{
+          $error = "Please Fill the Details !";
+        }
 
+    }
+
+?>
 
 <?php
 //include header area
@@ -11,7 +25,7 @@ include('inc/header.php');
 <section id="register" class="py-3">
 <div class="container">
 
-<form class="form-Horizontal" action="profile.php" method="POST">
+<form class="form-Horizontal" action="profile.php" method="POST" enctype="multipart/form-data">
   <fieldset>
     <legend>Add Profile</legend>
     
@@ -33,7 +47,7 @@ include('inc/header.php');
     <div class="form-group">
       <label for="avatar" class="col-lg-2 col-form-label" >Avatar</label>
       <div class="col-lg-10">
-      <input type="file" class="form-control" id="exampleInputPassword1" placeholder="Password" name="avater">
+      <input type="file" class="form-control" id="exampleInputPassword1" placeholder="Avatar" name="avatar">
     </div>
     </div>
     </div>
