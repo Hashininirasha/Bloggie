@@ -27,7 +27,7 @@ include('inc/header.php');
 ?>
 <p>
 <button type="button" class="btn btn-primary" a href="login.php"> <i class="fas fa-user"></i><a href="login.php" style="color: black;">|Log out </a></button>
-
+<button type="button" class="btn btn-primary" a href="profile.php"> <i class="fas fa-user"></i><a href="profile.php" style="color: black;">|Add Profile </a></button>
       
     </p>
 <h1 style="text-align: center;"> <?php echo $_SESSION['username']; ?> </h1>
