@@ -14,20 +14,43 @@ session_start();
           $file_type=$_FILES['avatar']['type'];
           $target_dir="assets/uploads";
           $target_file=$target_dir.basename($_FILES['avatar']['name']);
-          $data=array(
+          $check = getimagesize($_FILES['avatar']['tmp_name']);
+          //$file_ext=strtolower(end(explode('.',$_FILES['avatar']['name'])));
+
+          /*$data=array(
               'file_name' => $file_name,
               'file_size' => $file_size,
               'file_tmp' => $file_tmp,
               'file_type' => $file_type,
               'target_dir' => $target_dir,
+              //'file_ext' => $file_ext,
           );
           echo '<pre>';
           print_r($data);
           echo '<pre>';
-          exit();
+          exit(); */
+         /* if(in_array($file_ext,$extensions)=== false){
+            $errors[]="extension not allowed, please choose a JPEG or PNG file.";
+         }*/
+         
+         if(file_exists($target_file)){
+           $msg = "Sorry! File Already exist.";
+         }
+
+         if($check == false){
+           $msg = "File is not in Image";
+         }
+         if(empty($msg) == true){
+            move_uploaded_file($file_tmp,"assets/uploads/".$file_name);
+            $url=$_SERVER['HTTP_REFERER'];
+            $seg=explode('/',$url);
+            $path=$seg[0].'/'.$seg[1].'/'.$seg[2].'/'.$seg[3];
+            $full_url=$path.'/'.'assets/uploads/'.$file_name;
+            echo $full_url;
+         }
         }
         else{
-          $msg = "Please Fill the Details !";
+          $msg="Please fill all the Details";
         }
 
     }
