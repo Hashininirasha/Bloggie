@@ -7,7 +7,24 @@ session_start();
 
         $profession = $_POST['profession'];
         if($profession !=""){
-         
+          $uploadok=1;
+          $file_name=$_FILES['avatar']['name'];
+          $file_size=$_FILES['avatar']['size'];
+          $file_tmp=$_FILES['avatar']['tmp_name'];
+          $file_type=$_FILES['avatar']['type'];
+          $target_dir="assets/uploads";
+          $target_file=$target_dir.basename($_FILES['avatar']['name']);
+          $data=array(
+              'file_name' => $file_name,
+              'file_size' => $file_size,
+              'file_tmp' => $file_tmp,
+              'file_type' => $file_type,
+              'target_dir' => $target_dir,
+          );
+          echo '<pre>';
+          print_r($data);
+          echo '<pre>';
+          exit();
         }
         else{
           $msg = "Please Fill the Details !";
