@@ -47,7 +47,8 @@ session_start();
             $path=$seg[0].'/'.$seg[1].'/'.$seg[2].'/'.$seg[3];
             $full_url=$path.'/'.'assets/uploads/'.$file_name;
             $id=$_SESSION['id'];
-            $sql="INSERT INTO profile(profession, avatar, user_role) VALUES ('$profession','$full_url','$id')";
+            echo $sql="INSERT INTO profile(profession, avatar, user_role) VALUES ('$profession','$full_url','$id')";
+            exit();
             $query =$con->query($sql);
             if($query){
               header('Location:dashboard.php');
