@@ -1,20 +1,23 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
 
-<?php
+
     include("config/db.php");
     if(isset($_FILES['avatar'])){
 
         $profession = $_POST['profession'];
-        if($profession !=" "){
-          echo "Validation Passed";
+        if($profession !=""){
+         
         }
         else{
-          $error = "Please Fill the Details !";
+          $msg = "Please Fill the Details !";
         }
 
     }
 
 ?>
+
+ 
 
 <?php
 //include header area
@@ -61,7 +64,7 @@ include('inc/header.php');
     <div class="col-sm-4">
     <?php if(isset($_POST['profile'])):?>
         <div class="alert alert-dismissible alert-warning">
-        <p><?php echo $error;?></p> 
+        <p><?php echo $msg;?></p> 
         </div>
       <?php endif;?>
     </div>
