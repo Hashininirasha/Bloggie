@@ -38,11 +38,17 @@ include('inc/header.php');
     $full_url = $path.'/'.'imgs'.'/'.'avater.jpg';
     
 ?>
+<?php if($_SESSION['id'] == 1): ?>
+            <h1>Admin Dashboard</h1>
+    <?php else: ?>
+            <h1>User Dashboard</h1>
+    <?php endif; ?>
 <p>
 <button type="button" class="btn btn-primary" a href="login.php"> <i class="fas fa-user"></i><a href="login.php" style="color: black;">|Log out </a></button>
 <button type="button" class="btn btn-primary" a href="profile.php"> <i class="fas fa-user"></i><a href="profile.php" style="color: black;">|Add Profile </a></button>
       
     </p>
+    
 <h1 style="text-align: center;"> <?php echo $_SESSION['username']; ?> </h1>
     <div class="row">
     <div class="col-lg-12">
