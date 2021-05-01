@@ -1,7 +1,20 @@
 <?php
     session_start();
 ?>
+<?php 
+    include("config/db.php");
+    $id = $_SESSION['id'];
+    $query = "SELECT * FROM profile WHERE id = '$id'";
+    $result = mysqli_query($con, $query) or die('error');
+    if(mysqli_num_rows($result)>0){
+        while($row = mysqli_fetch_assoc($result)){
+            $id = $row['id'];
+            $avatar = $row['avatar'];
+            $profession = $row['profession'];
+        }
 
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +47,7 @@ include('inc/header.php');
     <div class="row">
     <div class="col-lg-12">
     <p style="text-align:center;">
-        <img src=<?php echo $full_url;?> style="width: 200px;height: 200px;border-radius:50%;"/>
+        <img src=<?php echo $avatar;?> style="width: 200px;height: 200px;border-radius:50%;"/>
     </p>
     </div>
     </div>
