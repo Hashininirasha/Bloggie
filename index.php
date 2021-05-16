@@ -3,6 +3,7 @@
 include('inc/header.php');
 
 ?>
+<link rel="stylesheet" href="style.css">
 
 <section id="register" class="py-3">
 <div class="container">
@@ -67,7 +68,3 @@ include('inc/header.php');
 
 </section>
 
-<?php
-//include footer area
-include('inc/footer.php');
-?>

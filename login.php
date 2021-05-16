@@ -44,42 +44,36 @@ include('inc/header.php');
 
 ?>
 
+
+<img id="Chat_gif" src="assets/hikerr.gif" alt="description of gif" style="width:280px;height:280px;margin: 20px;" > 
+
 <section id="register" class="py-3">
 <div class="container">
 
 <form class="form-Horizontal" action="login.php" method="POST">
-  <fieldset>
-    <legend>Logging User</legend>
-    
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-    <div class="form-group">
-      <label for="exampleInputEmail1" class="col-lg-2 col-form-label" >Email address</label>
-      <div class="col-lg-10">
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+<div class="wrapper">
+    <section class="form login">
+      <header>Welcome to HolaIn</header>
+      <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
       
-    </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-    <div class="form-group">
-      <label for="exampleInputPassword1" class="col-lg-2 col-form-label" >Password</label>
-      <div class="col-lg-10">
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
-    </div>
-    </div>
-    </div>
-    </div>
-    <br>
-    <button type="submit" name="login" class="btn btn-primary">Login</button>
-    <br>
-    <p>
-      Not yet a Member? <a href="index.php">Sign up </a>
-    </p>
+
+        <div class="error-text"></div>
+        <div class="field input">
+        <input type="text" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="field input">
+         <br>
+          <input type="password" name="password" placeholder="Enter your password" required>
+          <i class="fas fa-eye"></i>
+        </div>
+        <div class="field button">
+          <input type="submit" name="login" value="Continue to Chat">
+        </div>
+      </form>
+      <div class="link">Not yet signed up? <a href="index.php">Signup now</a></div>
+    </section>
+  </div>
+    
     <div class="row">
     <div class="form-group">
     <div class="col-sm-4">
@@ -98,7 +92,8 @@ include('inc/header.php');
 </section>
 
 
-<?php
-//include footer area
-include('inc/footer.php');
-?>
+ 
+
+</body>
+</html>
+

@@ -53,7 +53,7 @@ include('inc/header.php');
     <div class="row">
     <div class="col-lg-12">
     <p style="text-align:center;">
-        <img src=<?php echo $avatar;?> style="width: 200px;height: 200px;border-radius:50%;"/>
+        <img src=<?php echo $profession;?> style="width: 200px;height: 200px;border-radius:50%;"/>
     </p>
     </div>
     </div>
